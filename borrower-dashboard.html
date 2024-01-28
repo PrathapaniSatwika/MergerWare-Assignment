@@ -1,0 +1,14 @@
+<template name="borrowerDashboard">
+    <h2>Borrower Dashboard</h2>
+    <form>
+        <label>Loan Amount:</label>
+        <input type="number" name="loanAmount" required><br>
+        <input type="submit" value="Request Loan">
+    </form>
+    <h3>Past Loans</h3>
+    <ul>
+        {{#each pastLoan in getPastLoans}}
+            <li>Loan Request: {{pastLoan.amount}}</li>
+        {{/each}}
+    </ul>
+</template>

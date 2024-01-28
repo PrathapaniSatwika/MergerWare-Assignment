@@ -1,0 +1,12 @@
+<!-- client/admin-dashboard.html -->
+<body>
+<template name="adminDashboard">
+    <h2>Admin Dashboard</h2>
+    <h3>Complete Transactions</h3>
+    <ul>
+      {{#each completeTransactions}}
+        <li>{{transactionDetails}}</li>
+      {{/each}}
+    </ul>
+  </template>
+</body>

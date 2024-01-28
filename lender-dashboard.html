@@ -1,0 +1,14 @@
+<template name="lenderDashboard">
+  <h2>Lender Dashboard</h2>
+  <form>
+      <label>Loan Payment Confirmation:</label>
+      <input type="text" name="loanId" placeholder="Enter Loan ID" required><br>
+      <input type="submit" value="Confirm Payment" onclick="confirmPayment()">
+  </form>
+  <h3>Past Payments</h3>
+  <ul>
+      {{#each pastPayment in getPastPayments}}
+          <li>Payment: {{pastPayment.amount}}</li>
+      {{/each}}
+  </ul>
+</template>

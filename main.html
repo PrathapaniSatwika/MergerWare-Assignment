@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>loan-management-system</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="react-target"></div>
+  <template name="mainLayout">
+    <div id="main-content">
+      {{> Template.dynamic template=content}}
+    </div>
+    <div id="navbar">
+      {{#if isBorrower}}
+        <a href="{{pathFor 'borrowerDashboard'}}">Borrower Dashboard</a>
+      {{/if}}
+      {{#if isLender}}
+        <a href="{{pathFor 'lenderDashboard'}}">Lender Dashboard</a>
+      {{/if}}
+      {{#if isAdmin}}
+        <a href="{{pathFor 'adminDashboard'}}">Admin Dashboard</a>
+      {{/if}}
+    </div>
+  </template>
+</body>
+</html>

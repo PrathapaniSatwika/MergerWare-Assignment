@@ -1,0 +1,19 @@
+<!-- client/main-layout.html -->
+<template name="mainLayout">
+    <div id="main-content">
+      {{> Template.dynamic template=content}}
+    </div>
+    <div id="navbar">
+      {{#if isBorrower}}
+        <a href="{{pathFor 'borrowerDashboard'}}">Borrower Dashboard</a>
+      {{/if}}
+      {{#if isLender}}
+        <a href="{{pathFor 'lenderDashboard'}}">Lender Dashboard</a>
+      {{/if}}
+      {{#if isAdmin}}
+        <a href="{{pathFor 'adminDashboard'}}">Admin Dashboard</a>
+      {{/if}}
+      <!-- Add more navigation links as needed -->
+    </div>
+  </template>
+  
